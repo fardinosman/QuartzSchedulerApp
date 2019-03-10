@@ -26,14 +26,18 @@ namespace QuartzSchedulerApp
         {
             try
             {
+                
                 // Grab the schedular instance from the factory
                 NameValueCollection props = new NameValueCollection
                 {
                     {"quartz.serializer.type", "binary" }
                 };
-                StdSchedulerFactory factory = new StdSchedulerFactory(props);
-                IScheduler scheduler = await factory.GetScheduler();
 
+                StdSchedulerFactory factory = new StdSchedulerFactory(props);
+                
+                IScheduler scheduler = await factory.GetScheduler();
+                
+            
 
                 // and start it off
 
